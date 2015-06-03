@@ -1,0 +1,22 @@
+{
+  "name": "meta4",
+  "version": "1.0.0",
+  "description": "executable wireframes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backbone",
+    "marionette",
+    "bootstrap",
+    "json",
+    "wireframe",
+    "agile",
+    "lean",
+    "mvc",
+    "mvp"
+  ],
+  "author": "Troven <meta4@troven.com.au> (http://meta4beta.com/)",
+  "license": "Apache"
+}
