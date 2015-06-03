@@ -18,5 +18,11 @@
     "mvp"
   ],
   "author": "Troven <meta4@troven.com.au> (http://meta4beta.com/)",
-  "license": "Apache"
+  "license": "Apache",
+  "dependencies": {
+    "tingodb": "0.3.4",
+    "express": "2.3.x",
+    "optimist": "0.2.x"
+  }
+
 }
