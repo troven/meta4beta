@@ -9,6 +9,7 @@ A self contained runtime for prototyping application using meta4 JSON wireframes
 $ mkdir meta4beta
 $ cd meta4beta
 $ git clone https://github.com/troven/meta4beta.git
+$ npm install
 </pre>
 
 2) Start your meta4 server, type:
