@@ -13,5 +13,14 @@ The first thing you should do, is change the appropriate sections in package.jso
 
 Restart your meta4 server. A CTRL-C followed by ./bin/meta4.sh
 
-If you're using on Windows, sorry. You'll need to roll your own. 
+If you're using on Windows, or you want to roll your own. 
 
+node src/start.js
+
+A bare bones demo is included in ./src/
+
+Simply, browse the demo at:
+
+http://localhost:8080/meta4beta/
+
+Rip & replace to bring your ideas to life
