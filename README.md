@@ -3,7 +3,12 @@ meta4beta
 
 A self contained runtime for prototyping application using meta4 JSON wireframes.
 
-To start your meta4 server, type:
+1) Install from github
+
+$ mkdir meta4beta && cd meta4beta
+$ git clone https://github.com/troven/meta4beta.git
+
+2) Start your meta4 server, type:
 
 $ ./bin/meta.sh
 
@@ -19,7 +24,7 @@ node src/start.js
 
 A bare bones demo is included in ./src/
 
-Simply, browse the demo at:
+3) Browse the demo at:
 
 http://localhost:8080/meta4beta/
 
