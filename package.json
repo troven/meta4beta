@@ -1,29 +1,26 @@
 {
   "name": "meta4beta",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "meta4beta - executable wireframes",
   "main": "src/start.js",
   "scripts": {
-	"start": "node src/start.js" 
+    "start": "node src/start.js"
   },
   "keywords": [
-	"meta4",
-	"meta4beta"
+    "meta4",
+    "meta4beta"
   ],
   "author": "Troven <meta4@troven.com.au> (http://meta4beta.com/)",
   "licenses": [
-	{
-	  "type": "Apache 2.0",
-	  "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-	}
+    {
+      "type": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
   ],
   "dependencies": {
-	"meta4node": "~0.7.10",
-	"meta4ux": "~0.6.2",
-	"mongodb": "~2.0.33"
+    "meta4node": "~0.7.10",
+    "meta4ux": "~0.6.2",
+    "mongodb": "~2.0.33"
   },
-
-  "devDependencies": {
-  }
-
+  "devDependencies": {}
 }
