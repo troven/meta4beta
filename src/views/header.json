@@ -1,0 +1,9 @@
+{
+  "id": "views:header",
+  "label": "Hello !!",
+  "widget": "MenuButton",
+  "collection": [
+	{"id": "hello", "label": "Hello" },
+	{"id": "world", "label": "World" }
+ ]
+}

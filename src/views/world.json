@@ -1,0 +1,14 @@
+{
+  "id": "views:world",
+  "label": "Hello !!",
+  "widget": "ActionList",
+  "css": "panel panel-default big",
+  "when": {
+	"action:hello": "scripts:hello.js",
+	"action:world": "scripts:world.js"
+  },
+  "collection": [
+	{ "id": "hello", "label": "Hello"},
+	{ "id": "world", "label": "World"}
+  ]
+}

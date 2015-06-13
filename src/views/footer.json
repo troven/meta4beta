@@ -1,0 +1,6 @@
+{
+  "id": "views:hello",
+  "label": "Hello !!",
+  "widget": "Template",
+  "template": "<h1>Hello World</h1>"
+}

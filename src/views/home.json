@@ -1,0 +1,12 @@
+{
+  "id": "views:home",
+  "label": "meta4beta",
+  "widget": "Home",
+  "views": {
+    "header": "views:header",
+    "body": "views:hello",
+    "footer": "views:footer",
+    "hello": "views:hello",
+    "world": "views:world"
+  }
+}
