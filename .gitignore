@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # meta4
 
 demo/uploads
@@ -7,6 +8,8 @@ tmp
 # IntelliJ
 *.iml
 
+=======
+>>>>>>> e6a841ec0bd6076319e5aebfc175535a9aadda28
 # Logs
 logs
 *.log
