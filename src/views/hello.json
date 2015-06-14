@@ -1,6 +1,7 @@
 {
   "id": "views:hello",
   "label": "Hello !!",
+  "css": "panel panel-default",
   "widget": "Template",
   "template": "<h1>Hello World</h1>"
 }

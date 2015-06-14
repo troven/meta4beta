@@ -38,4 +38,28 @@ A bare bones demo is included in ./src/
 http://localhost:8080/meta4beta/
 </pre>
 
-Rip & replace to bring your ideas to life
+Rip & replace to bring your ideas to life.
+
+For a basic tutorial on building your UI:
+
+https://github.com/troven/meta4ux/wiki
+
+Take a look at the following files to get the basic idea:
+
+Models:
+./src/models/meta/
+
+Scripts:
+./src/scripts/hello.js
+./src/scripts/world.js
+
+Templates:
+./src/templates/client
+
+Views:
+./src/views/footer.json
+./src/views/header.json
+./src/views/hello.json
+./src/views/home.json
+./src/views/world.json
+
