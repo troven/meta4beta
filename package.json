@@ -1,6 +1,6 @@
 {
   "name": "meta4beta",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "meta4beta - executable wireframes",
   "main": "src/start.js",
   "scripts": {
@@ -18,8 +18,8 @@
     }
   ],
   "dependencies": {
-    "meta4node": "~0.7.10",
-    "meta4ux": "~0.6.2",
+    "meta4node": "~0.7.13",
+    "meta4ux": "~0.6.4",
     "mongodb": "~2.0.33"
   },
   "devDependencies": {}
