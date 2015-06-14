@@ -45,6 +45,7 @@ https://github.com/troven/meta4ux/wiki
 
 Take a look at the following files to get the basic idea:
 
+<pre>
 Models:
 ./src/models/meta/
 
@@ -61,4 +62,5 @@ Views:
 ./src/views/hello.json
 ./src/views/home.json
 ./src/views/world.json
+</pre>
 
