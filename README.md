@@ -6,9 +6,8 @@ A self contained runtime for prototyping application using meta4 JSON wireframes
 1) Install from github
 
 <pre>
-$ mkdir meta4beta
-$ cd meta4beta
 $ git clone https://github.com/troven/meta4beta.git
+$ cd meta4beta
 $ npm install
 </pre>
 
