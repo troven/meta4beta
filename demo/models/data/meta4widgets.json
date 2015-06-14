@@ -1,0 +1,42 @@
+[
+   {
+	  "id": "Text",
+	  "label": "Text Input"
+   },
+   {
+	  "id": "Number",
+	  "label": "Number Input"
+   },
+   {
+	  "id": "Template",
+	  "label": "HTML Template"
+   },
+   {
+	  "id": "List",
+	  "label": "List of Items"
+   },
+   {
+	  "id": "MenuButton",
+	  "label": "Menu Button"
+   },
+   {
+	  "id": "TextArea",
+	  "label": "Text Area"
+   },
+   {
+	  "id": "Select",
+	  "label": "Selection"
+   },
+   {
+	  "id": "Form",
+	  "label": "Form Fields"
+   },
+   {
+	  "id": "Grid",
+	  "label": "Data Grid"
+   },
+   {
+	  "id": "CRUD",
+	  "label": "Generic CRUD"
+   },
+]

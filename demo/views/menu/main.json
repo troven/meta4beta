@@ -1,0 +1,8 @@
+{
+  "id": "views:menu/home",
+  "label": "Menu",
+  "widget": "MenuList",
+  "isPopOver": false,
+  "model": true,
+  "collection": "menu_home"
+}

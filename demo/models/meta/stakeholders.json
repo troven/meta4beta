@@ -1,0 +1,19 @@
+{
+  "id": "stakeholders",
+  "label": "Stakeholders Model",
+  "isRemote": true,
+  "isClient": true,
+  "type": "Default",
+  "store": "file",
+  "prefetch": true,
+  "debug": false,
+  "defaults": {
+    "label": "New User"
+  },
+  "schema": {
+  },
+  "data": [
+    {"label": "User #1" },
+    {"label": "User #2" }
+  ]
+}

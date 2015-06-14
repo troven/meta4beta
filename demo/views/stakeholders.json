@@ -1,0 +1,40 @@
+{
+  "id": "views:stakeholders",
+  "widget": "CRUD",
+  "debug": true,
+  "collection": "stakeholders",
+  "className": "panel panel-default",
+  "views": {
+    "read": {
+      "headers": true,
+      "footers": true,
+      "id": "views:stakeholders/read",
+      "label": "My Stakeholders",
+      "comment": "stakeholders are user of the software.",
+      "icon": "/static/brand/favicon.png",
+      "widget": "Collection",
+      "className": "clearfix",
+      "child": {
+        "className": "col-sm-6  clearfix",
+         "template": "templates:client/snippet/gallery/post.html"
+      },
+      "isSortable": true,
+      "debug": false,
+      "schema": {
+        "label": {
+          "widget": "Text",
+          "required": true,
+          "label": "Name",
+          "focus": true,
+          "className": "form-group"
+        },
+        "comment": {
+          "widget": "TextArea",
+          "label": "Description"
+        }
+      }
+    },
+    "create": "views:stakeholders/create",
+    "update": "views:stakeholders/update"
+  }
+}

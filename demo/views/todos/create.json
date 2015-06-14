@@ -1,0 +1,51 @@
+{
+   "id": "views:todos/create",
+   "label": "Create a todo",
+   "comment": "Create a todo in a few short steps.",
+   "widget": "Wizard", "modal": true,
+   "collection": "todos",
+   "iq": { },
+   "className": "col-sm-12",
+  "headers": false, "footers": false,
+   "transitions": {
+	  "start": {
+		 "cancel": "cancelled",
+		 "next": "step1"
+	  },
+	 "invalid": {
+	   "previous": "start",
+	   "finish": "finish"
+	 },
+	  "step1": {
+		"previous": "start",
+		"finish": "finish"
+	  }
+   },
+   "views": {
+	  "start": {
+		 "id": "views:todos/start",
+		 "label": "Create a new todo",
+		 "template": "<img class='pull-right' src='/static/img/misc/wizard.png'/><div class='clearfix'><h2 >Welcome to the ToDo wizard.</h2></div>"
+	  },
+	  "step1": {
+		 "id": "views:todos/step1",
+		 "label": "Step 1: Describe your task",
+		 "comment": "Your task needs a name and a short description.",
+		 "widget": "Form",
+		 "schema": {
+			"label": {
+			   "widget": "Text",
+			   "required": true,
+			   "label": "Task Name",
+			   "focus": true,
+			   "className": "form-group"
+			},
+			"comment": {
+			  "className": "form-group",
+			   "widget": "TextArea",
+			   "label": "Description"
+			}
+		 }
+	  }
+   }
+}

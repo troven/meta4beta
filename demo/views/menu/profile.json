@@ -1,0 +1,8 @@
+{
+   "id": "views:menu/profile",
+   "label": "Menu",
+   "el": "#menu_profile",
+   "widget": "MenuList",
+   "model": true,
+   "collection": "menu_profile"
+}

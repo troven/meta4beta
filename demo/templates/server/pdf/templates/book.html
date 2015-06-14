@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta name="title" content="Meta4Beta Template" />
+	<meta name="author" content="Meta4Beta" />
+	<meta name="subject" content="Meta4Beta PDF Template" />
+	<style>
+		body {
+			font-family: Sans-Serif;
+			padding: 0;
+			margin: 0;
+		}
+		@page {
+			padding: 0;
+			margin: 0;
+		}
+
+		@page {
+			@bottom-right {
+				content: "page " counter(page) " of " counter(pages);
+			}
+		}
+
+		.footer {
+			position: running(footer);
+			font-size: 11px;
+			text-align: center;
+		}
+
+		.page {
+			page-break-after:always;
+			padding-top: 20px;
+		}
+
+		.toc {
+			padding-left: 20px;
+		}
+		.toc a {
+			text-decoration: none;
+			color: grey;
+		}
+
+		.clearfix {
+			clear: both;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 1.5em;
+			padding: 0px;
+			margin: 0px;
+			border: none;
+		}
+
+		h2 {
+			font-size: 1.2em;
+			padding: 0px;
+			margin: 0px;
+			border: none;
+		}
+
+		h3 {
+			font-size: 1em;
+			padding: 0px;
+			margin: 0px;
+			border: none;
+		}
+		p {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		.section {
+			page-break-inside: avoid;
+		}
+
+		.pull-right {
+			float: right;
+		}
+		.pull-left {
+			float: left;
+		}
+
+		.borders {
+			margin: 10px;
+			border: 1px solid grey;
+		}
+
+		.page {
+			padding: 10px;
+		}
+
+		.section {
+			padding-left: 20px;
+		}
+
+		.about {
+			padding-top: 10px;
+			font-size: 0.7em;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="cover page">
+		${it.cover}
+	</div>
+
+	<div class="body">
+		${it.body}
+	</div>
+
+</body>
+</html>

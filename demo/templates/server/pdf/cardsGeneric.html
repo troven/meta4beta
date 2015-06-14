@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta name="title" content="Meta4Beta Template" />
+	<meta name="author" content="Meta4Beta" />
+	<meta name="subject" content="Meta4Beta PDF Template" />
+	<style>
+		body {
+			font-family: Sans-Serif;
+			padding: 0;
+			margin: 0;
+		}
+		@page {
+			padding: 0;
+			margin: 0;
+		}
+
+		@page {
+			@bottom-right {
+			content: "page " counter(page) " of " counter(pages);
+			}
+		}
+		.page {
+			page-break-after:always;
+		}
+
+		.clearfix {
+			clear: both;
+		}
+
+		.card {
+			width: 32%;
+			height: 342px;
+			float: left;
+			margin: 4px;
+			padding: 0px;
+			border: 1px solid #F0F0F0;
+		}
+		.card .content {
+			height: 300px;
+		}
+
+		.card p {
+			padding: 10px;
+			font-size: 14px;
+			line-height: 1.5em;
+		}
+
+		.card .footer {
+			padding: 5px;
+			font-size: 0.5em;
+			position: relative;
+			bottom: 0px;
+		}
+
+		h1 {
+			min-height: 32px;
+			text-align: center;
+			font-size: 0.8em;
+			padding: 5px;
+			margin: 0px;
+			border: none;
+		}
+
+		.method h1 {
+			background-color: #dff0d8;
+			color: #003300;
+			border-bottom: 4px solid #008000;
+		}
+
+		.process h1 {
+			background-color: #428BCA;
+			color: #F0F0FF;
+			border-bottom: 4px solid #000080;
+		}
+	</style>
+</head>
+<body>
+<% def cx = it.cx; %>
+<div class="page">
+	<% it.methods.each { it ->
+	print "<div class='method card'><div class='content'><h1>${it.label}</h1><p>${it.comment}</p></div><div class='footer'>${it.is_mandatory?"mandatory":"optional"}<br/>&copy; Meta4Beta 2014-2015. Customised by ${cx.label}</div></div>"
+	}%>
+</div>
+<div class="clearfix"></div>
+<% it.processes.each { it ->
+print "<div class='process card'><div class='content'><h1>${it.label}</h1><p>${it.comment}</p></div><div class='footer'>${it.is_mandatory?"mandatory":"optional"}<br/>&copy; Meta4Beta 2014-2015. Customised by ${cx.label}</div></div>"
+}%>
+</body>
+</html>

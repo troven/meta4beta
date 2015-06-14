@@ -1,0 +1,38 @@
+{
+  "id": "views:home",
+  "label": "Welcome",
+  "widget": "Home",
+  "views": {
+    "header": {
+      "label": "Menu",
+      "widget": "MenuButton",
+      "className": "nav nav-pills",
+      "collection": [
+        { "id": "projects", "label": "Projects"},
+        { "id": "stakeholders", "label": "Stakeholders"},
+        { "id": "todos", "label": "To Dos"}
+      ]
+    },
+    "body": "views:todos",
+    "projects": "views:projects",
+    "stakeholders": "views:stakeholders",
+    "todos": "views:todos",
+    "footer": {
+      "className": "page-header",
+      "widget": "demo:RandomView",
+      "require": "demo/view/RandomView",
+      "refreshTimer": 2000,
+      "views": {
+        "hello": {
+          "template": "<h1>Hello: {{label}}</h1>"
+        },
+        "world": {
+          "template": "<h1>{{label}}</h2>"
+        },
+        "greetings": {
+          "template": "<h1>Greetings: {{label}}</h1>"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "snippets",
+  "label": "Snippets Model",
+  "isRemote": true,
+  "isClient": true,
+  "type": "Default",
+  "store": "file",
+  "prefetch": true,
+  "debug": false,
+  "defaults": {
+    "label": "New Snippet"
+  },
+  "schema": {
+  },
+  "data": [
+    {"label": "Snippet #1", "template": "Snippet #1: {{label}}" },
+    {"label": "Snippet #2", "template": "Snippet #2: {{label}}" }
+  ]
+}

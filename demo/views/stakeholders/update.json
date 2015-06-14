@@ -1,0 +1,40 @@
+{
+  "id": "views:stakeholders/update",
+  "label": "Edit User",
+  "icon": "/static/brand/favicon.png",
+  "className": "container",
+  "widget": "Tabs",
+  "tabs": {
+    "About": {
+      "widget": "Form",
+      "model": false,
+      "schema": {
+        "label": {
+          "widget": "Text",
+          "required": true,
+          "label": "Name",
+          "focus": true,
+          "className": "form-group"
+        },
+        "comment": {
+          "widget": "TextArea",
+          "label": "Description"
+        },
+        "url": {
+          "widget": "URL",
+          "required": true,
+          "label": "Website",
+          "focus": true,
+          "className": "form-group"
+        },
+        "imageURL": {
+          "widget": "URL",
+          "required": true,
+          "label": "Image",
+          "focus": true,
+          "className": "form-group"
+        }
+      }
+    }
+  }
+}

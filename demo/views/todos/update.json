@@ -1,0 +1,45 @@
+{
+  "id": "views:todos/update",
+  "label": "Edit a todo",
+  "comment": "Edit your ToDo",
+  "widget": "Window",
+  "dialog": true,
+  "views": {
+	"child": {
+	  "label": "Edit To Do",
+	  "icon": "/static/brand/favicon.png",
+	  "className": "container",
+	  "widget": "Tabs",
+	  "tabs": {
+		"About": {
+		  "widget": "Form",
+		  "model": false,
+		  "schema": {
+			"label": {
+			  "widget": "Text",
+			  "required": true,
+			  "label": "Task Name",
+			  "focus": true,
+			  "className": "form-group"
+			},
+			"comment": {
+			  "widget": "TextArea",
+			  "label": "Description",
+			  "className": "form-group"
+			},
+			"dueDate": {
+			  "widget": "Date",
+			  "label": "Due Date",
+			  "className": "form-group"
+			},
+			"complete": {
+			  "widget": "Boolean",
+			  "label": "Completed",
+			  "className": "form-group"
+			}
+		  }
+		}
+	  }
+	}
+  }
+}

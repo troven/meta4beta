@@ -1,0 +1,35 @@
+{
+  "id": "views:grid",
+  "widget": "CRUD",
+  "debug": true,
+  "collection": "stakeholders",
+  "className": "panel panel-default",
+  "views": {
+    "read": {
+      "headers": true,
+      "footers": true,
+      "id": "views:grid/read",
+      "label": "My Stakeholders",
+      "comment": "stakeholders are user of the software.",
+      "icon": "/static/brand/favicon.png",
+      "widget": "Grid",
+
+      "isSortable": true,
+      "debug": false,
+      "schema": {
+        "label": {
+          "widget": "Text",
+          "required": true,
+          "label": "Name",
+          "focus": true,
+          "className": "form-group"
+        },
+        "comment": {
+          "widget": "TextArea",
+          "label": "Description"
+        }
+      }
+    },
+    "create": "views:grid/create"
+  }
+}

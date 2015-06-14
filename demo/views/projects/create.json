@@ -1,0 +1,131 @@
+{
+   "id": "views:projects/create",
+   "label": "Create a project",
+   "comment": "Create a project in a few short steps.",
+   "widget": "Tabs", "modal": true,
+   "collection": "projects",
+   "iq": { },
+   "className": "col-sm-12",
+  "headers": false, "footers": false,
+   "transitions": {
+	  "start": {
+		 "cancel": "cancelled",
+		 "next": "step1"
+	  },
+	  "step1": {
+		 "previous": "start",
+		 "next": "step2"
+	  },
+	  "step2": {
+		 "previous": "step1",
+		 "next": "step3"
+	  },
+	  "step3": {
+		 "previous": "step2",
+		 "next": "step4"
+	  },
+	  "step4": {
+		 "previous": "step3",
+		 "finish": "finished"
+	  }
+   },
+   "views": {
+	  "start": {
+		 "id": "views:projects/start",
+		 "label": "Create a new Project",
+		 "template": "<img class='pull-right' src='/static/img/misc/wizard.png'/><div class='clearfix'><h2 >Welcome to the Project wizard.</h2><h3>In a few clicks you will have created a project and assigned a methodology.</h3></div>"
+	  },
+	  "step1": {
+		 "id": "views:projects/step1",
+		 "label": "Step 1: Describe your project",
+		 "comment": "Your project needs a name and a short description.",
+		 "widget": "Form",
+		 "schema": {
+			"label": {
+			   "widget": "Text",
+			   "required": true,
+			   "label": "Project Name",
+			   "focus": true,
+			   "className": "form-group"
+			},
+			"comment": {
+			  "className": "form-group",
+			   "widget": "TextArea",
+			   "label": "Description"
+			}
+		 }
+	  },
+	  "step2": {
+		 "id": "views:projects/step2",
+		 "label": "Step 2: Project Number",
+		 "comment": "Select a methodology for your project.",
+		 "widget": "Form",
+		 "schema": {
+		   "portfolio": {
+			 "className": "form-group",
+			 "label": "Portfolio",
+			 "widget": "Select",
+			 "options": "portfolio"
+		   },
+			"projectNumber": {
+			   "widget": "Text",
+			   "required": false,
+			   "label": "Project Number",
+			   "className": "form-group"
+			},
+			"clientNumber": {
+			   "widget": "Text",
+			   "required": false,
+			   "label": "Client Number",
+			   "className": "form-group"
+			}
+		 }
+	  },
+	  "step3": {
+		 "id": "views:projects/step3",
+		 "label": "Step 3: Project Stakeholders",
+		 "comment": "Select the team members who will lead the project.",
+		 "widget": "Form",
+		 "schema": {
+			"sponsor": {
+			  "className": "form-group",
+			   "widget": "Select",
+			   "options": "users"
+			},
+			"manager": {
+			  "className": "form-group",
+			   "widget": "Select",
+			   "options": "users"
+			}
+		 }
+	  },
+	  "step4": {
+		 "id": "views:projects/step4",
+		 "label": "Step 4: Project Status",
+		 "comment": "Describe the current status of the project.",
+		 "widget": "Form",
+		 "schema": {
+			"status": {
+			  "className": "form-group",
+			   "widget": "Select",
+			   "options": [
+				  "initial",
+				  "on_track",
+				  "issues",
+				  "risky",
+				  "closed",
+				  "aborted"
+			   ]
+			},
+			"complete": {
+			  "className": "form-group",
+			   "label": "% Completed",
+			   "widget": "Select",
+			   "options": [
+				  "0", "25", "50", "75", "95", "100"
+			   ]
+			}
+		 }
+	  }
+   }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "views:todos",
+  "widget": "CRUD",
+  "debug": false,
+  "collection": "todos",
+  "className": "panel panel-default",
+  "headers": {
+    "read": {
+      "widget": "Regions",
+      "views": {
+        "header": {
+          "template": "Hello",
+          "debug": true,
+          "widget": "Template"
+        },
+        "body": {
+          "debug": false,
+          "widget": "SearchFilter",
+          "facets": [ "dueDate", "complete" ]
+        }
+      }
+    }
+  },
+  "views": {
+    "x": {
+      "widget": "SearchFilter"
+    },
+    "read": {
+      "id": "views:todos/read",
+      "widget": "Tabs",
+      "tabs": {
+        "List": {
+          "headers": true,
+          "footers": true,
+          "label": "My To Dos",
+          "comment": "To Dos are simple tasks.",
+          "icon": "/static/brand/favicon.png",
+          "widget": "ActionList",
+          "className": "container panel-body",
+
+          "isSortable": true,
+          "debug": false,
+          "child": {
+            "className": "col-sm-3 list-group-item clickable",
+            "template": "<div about='{{id}}'><div class='dialog-heading'>{{label}}&nbsp;<small>({{complete}})</small></div></div>",
+            "popover": {
+              "placement": "bottom",
+              "label": "Edit: {{label}}",
+              "comment": "{{comment}}"
+            }
+          }
+        },
+        "Calendar": {
+          "headers": true,
+          "footers": true,
+          "label": "Calendar",
+          "comment": "To Dos are simple tasks.",
+          "icon": "/static/brand/favicon.png",
+          "widget": "Calendar",
+          "className": "container panel-body",
+          "isSortable": true,
+          "when": {
+            "all": "console.log('DEBUG: %o %o',this, arguments)"
+          },
+          "remap": {
+            "label": "title"
+          },
+          "debug": false
+        },
+        "Gannt": {
+          "headers": true,
+          "footers": true,
+          "label": "Gantt",
+          "comment": "To Dos are simple tasks.",
+          "icon": "/static/brand/favicon.png",
+          "widget": "ActionList",
+          "className": "container panel-body",
+
+          "isSortable": true,
+          "debug": false,
+          "child": {
+            "className": "col-sm-3 list-group-item clickable",
+            "template": "<div about='{{id}}'><div class='dialog-heading'>{{label}}&nbsp;<small>({{is_active}})</small></div><br/><div class='progress'> <div class='progress-bar status_{{status}}' role='progressbar' aria-valuenow='{{complete}}' aria-valuemin='0' aria-valuemax='100' style='width:{{complete}}%'>{{complete}}% - {{status}}</div></div></div>",
+            "popover": {
+              "placement": "bottom",
+              "label": "Edit: {{label}}",
+              "comment": "{{comment}}"
+            }
+          }
+        }
+      }
+    },
+    "create": "views:todos/create",
+    "update": "views:todos/update"
+  }
+}

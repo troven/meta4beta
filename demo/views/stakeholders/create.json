@@ -1,0 +1,47 @@
+{
+   "id": "views:stakeholders/create",
+   "label": "Create a stakeholder",
+   "comment": "Create a stakeholder in a few short steps.",
+   "widget": "Wizard", "modal": true,
+   "collection": "stakeholders",
+   "iq": { },
+   "className": "col-sm-12",
+  "headers": false, "footers": false,
+   "transitions": {
+	  "start": {
+		 "cancel": "cancelled",
+		 "next": "step1"
+	  },
+	  "step1": {
+		 "previous": "start",
+		"finish": "finished"
+	  }
+   },
+   "views": {
+	  "start": {
+		 "id": "views:stakeholders/start",
+		 "label": "Create a new stakeholder",
+		 "template": "<img class='pull-right' src='/static/img/misc/wizard.png'/><div class='clearfix'><h2 >Welcome to the stakeholder wizard.</h2></div>"
+	  },
+	  "step1": {
+		 "id": "views:stakeholders/step1",
+		 "label": "Step 1: Describe your user",
+		 "comment": "Your user needs a name and a short introduction.",
+		 "widget": "Form",
+		 "schema": {
+			"label": {
+			   "widget": "Text",
+			   "required": true,
+			   "label": "Name",
+			   "focus": true,
+			   "className": "form-group"
+			},
+			"comment": {
+			  "className": "form-group",
+			   "widget": "TextArea",
+			   "label": "Introduction"
+			}
+		 }
+	  }
+   }
+}

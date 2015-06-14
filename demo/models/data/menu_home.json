@@ -1,0 +1,47 @@
+[
+  {
+	"id": "welcome",
+	 "icon": "home",
+	"label": "Home"
+  },
+  {
+	"id": "meta4widgets",
+	 "icon": "sitemap",
+	"label": "Widgets"
+  },
+  {
+	"id": "meta4views",
+	 "icon": "cogs",
+	"label": "Views"
+  },
+   {
+	  "id": "meta4models",
+	  "icon": "cogs",
+	  "label": "Models"
+   },
+   {
+	  "id": "meta4code",
+	  "icon": "cogs",
+	  "label": "Scripts"
+   },
+   {
+	  "id": "meta4cx",
+	  "icon": "suitcase",
+	  "label": "Client Experience"
+   },
+  {
+	"id": "meta4principals",
+	 "icon": "group",
+	"label": "Principals"
+  },
+  {
+	"id": "meta4templates",
+	 "icon": "file",
+	"label": "Templates"
+  },
+   {
+	  "id": "meta4apis",
+	  "icon": "cloud",
+	  "label": "APIs"
+   },
+]

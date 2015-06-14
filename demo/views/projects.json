@@ -1,0 +1,33 @@
+{
+  "id": "views:projects",
+  "widget": "CRUD",
+  "debug": true,
+  "collection": "projects",
+  "className": "panel panel-default",
+  "views": {
+    "read": {
+      "headers": true,
+      "footers": true,
+       "id": "views:projects/read",
+       "label": "My Projects",
+       "comment": "Projects are managed undertakings.",
+       "icon": "/static/brand/favicon.png",
+       "widget": "ActionList",
+       "className": "container panel-body",
+
+        "isSortable": true,
+        "debug": false,
+        "child": {
+          "className": "col-sm-3 list-group-item clickable",
+          "template": "<div about='{{id}}'><div class='dialog-heading'>{{label}}&nbsp;<small>({{is_active}})</small></div><br/><div class='progress'> <div class='progress-bar status_{{status}}' role='progressbar' aria-valuenow='{{complete}}' aria-valuemin='0' aria-valuemax='100' style='width:{{complete}}%'>{{complete}}% - {{status}}</div></div></div>",
+          "popover": {
+            "placement": "bottom",
+            "label": "{{label}}",
+            "comment": "<p>{{comment}}</p><hr/><div><label>Project # </label>{{projectNumber}}</div> {{#clientNumber}}<div><label>Client # </label>{{clientNumber}}</div>{{/clientNumber}}"
+          }
+        }
+    },
+    "create": "views:projects/create",
+    "update": "views:projects/update"
+  }
+}

@@ -1,0 +1,96 @@
+{
+   "id": "views:projects/update",
+   "label": "Edit Project",
+   "icon": "/static/brand/favicon.png",
+   "className": "container",
+   "widget": "Tabs",
+   "tabs": {
+	  "About": {
+		 "widget": "Form",
+		 "model": false,
+		 "schema": {
+			"label": {
+			   "widget": "Text",
+			   "required": true,
+			   "label": "Project Name",
+			   "focus": true,
+			   "className": "form-group"
+			},
+			"projectNumber": {
+			   "widget": "Text",
+			   "required": true,
+			  "className": "form-group",
+			   "label": "Project Number",
+			   "className": "form-group"
+			},
+			"clientNumber": {
+			   "widget": "Text",
+			  "className": "form-group",
+			   "required": false,
+			   "label": "Client Number"
+			},
+			"comment": {
+			   "widget": "TextArea",
+			   "label": "Description"
+			}
+		 }
+	  },
+	  "Stakeholders": {
+		 "widget": "Form",
+		 "model": false,
+		 "schema": {
+			"sponsor": {
+			  "className": "form-group",
+			   "widget": "Select",
+			   "options": "users",
+			   "child": {
+				  "template": "{{lastname}}, {{firstname}}"
+			   }
+			},
+			"manager": {
+			  "className": "form-group",
+			   "widget": "Select",
+			   "options": "users",
+			   "child": {
+				  "template": "{{lastname}}, {{firstname}}"
+			   }
+			}
+		 }
+	  },
+	  "Status": {
+		 "widget": "Form",
+		 "model": false,
+		 "schema": {
+			"is_active": {
+			  "className": "form-group",
+			   "widget": "Select",
+			   "options": [
+				  "active",
+				  "inactive",
+				  "archived"
+			   ]
+			},
+			"status": {
+			  "className": "form-group",
+			   "widget": "Select",
+			   "options": [
+				  "initial",
+				  "on_track",
+				  "issues",
+				  "risky",
+				  "closed",
+				  "aborted"
+			   ]
+			},
+			"complete": {
+			  "className": "form-group",
+			   "label": "% Completed",
+			   "widget": "Select",
+			   "options": [
+				  "0", "25", "50", "75", "95", "100"
+			   ]
+			}
+		 }
+	  }
+   }
+}

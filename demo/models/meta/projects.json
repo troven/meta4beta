@@ -1,0 +1,15 @@
+{
+   "id": "projects",
+   "label": "Projects Model",
+   "isRemote": true,
+   "isClient": true,
+   "type": "Default",
+   "store": "file",
+   "prefetch": true,
+   "debug": false,
+   "defaults": {
+	  "label": "New Project"
+   },
+   "schema": {
+   }
+}

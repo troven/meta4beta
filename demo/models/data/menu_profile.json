@@ -1,0 +1,17 @@
+[
+   {
+	  "id": "principal",
+	  "icon": "user",
+	  "label": "My Profile"
+   },
+   {
+	  "id": "accountSettings",
+	  "icon": "cog",
+	  "label": "Account Settings"
+   },
+   {
+	  "id": "help",
+	  "icon": "calendar",
+	  "label": "Help"
+   }
+]

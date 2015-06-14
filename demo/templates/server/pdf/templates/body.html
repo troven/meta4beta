@@ -1,0 +1,21 @@
+<a name="toc_${it.template.id}"/>
+<div class="page">
+	<div>
+		<div class='pull-left'>
+			<img src="${it.webroot}/static/brand/logo_small.png"/>
+		</div>
+		<div class='pull-right'>
+			<div><h3>${it.template.label}</h3></div>
+			<div class="about">
+				<div>Project: ${it.project.label}</div>
+				<div>Manager: ${it.project?.manager?.firstname} ${it.project?.manager?.lastname}</div>
+				<div>Date: ${it.today}</div>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<div class='body clearfix'>
+		${it.template.page}
+	</div>
+</div>
+
