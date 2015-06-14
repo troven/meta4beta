@@ -18,7 +18,7 @@
     }
   ],
   "dependencies": {
-    "meta4node": "~0.7.13",
+    "meta4node": "~0.7.14",
     "meta4ux": "~0.6.4",
     "mongodb": "~2.0.33"
   },
