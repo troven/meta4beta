@@ -1,14 +1,16 @@
 meta4beta
 ---------
 
-A self contained runtime for prototyping application using meta4 JSON wireframes.
+A self contained runtime for prototyping applications using meta4 JSON wireframes.
+
+For a basic tutorial on building your UI, check out: https://github.com/troven/meta4ux/wiki
+
 
 1) Install from github
 
 <pre>
-$ mkdir meta4beta
-$ cd meta4beta
 $ git clone https://github.com/troven/meta4beta.git
+$ cd meta4beta
 $ npm install
 </pre>
 
@@ -20,9 +22,15 @@ $ ./bin/meta.sh
 
 Your server should start-up and announce that it's listening on port 8080.
 
-The first thing you should do, is change the appropriate sections in package.json and meta4.json to match your project.
+4) Browse the demo at:
 
-Restart your meta4 server. A CTRL-C followed by ./bin/meta4.sh
+<pre>
+http://localhost:8080/meta4beta/
+</pre>
+
+5) Change the appropriate entries in package.json and meta4.json to match your project.
+
+6) Restart your meta4 server. A CTRL-C followed by ./bin/meta4.sh
 
 If you're using on Windows, or you want to roll your own. 
 
@@ -30,22 +38,19 @@ If you're using on Windows, or you want to roll your own.
 node src/start.js
 </pre>
 
-A bare bones demo is included in ./src/
-
-3) Browse the demo at:
+7) Browse the demo at:
 
 <pre>
-http://localhost:8080/meta4beta/
+http://localhost:8080/your_projet/
 </pre>
+
+8) A bare bones example is included in ./src/
 
 Rip & replace to bring your ideas to life.
 
-For a basic tutorial on building your UI:
-
-https://github.com/troven/meta4ux/wiki
-
 Take a look at the following files to get the basic idea:
 
+<pre>
 Models:
 ./src/models/meta/
 
@@ -62,4 +67,5 @@ Views:
 ./src/views/hello.json
 ./src/views/home.json
 ./src/views/world.json
+</pre>
 
