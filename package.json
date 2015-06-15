@@ -1,10 +1,10 @@
 {
   "name": "meta4beta",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "meta4beta - executable wireframes",
-  "main": "src/start.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node src/start.js"
+    "start": "node src/index.js"
   },
   "keywords": [
     "meta4",
@@ -22,10 +22,14 @@
     "url": "https://github.com/troven/meta4beta.git"
   },
   "dependencies": {
-    "machinepack-github": "^3.0.4",
     "meta4node": "~0.7.15",
-    "meta4ux": "~0.6.^",
-    "mongodb": "~2.0.33"
+    "meta4ux": "~0.6.6",
+    "meta4facts": "~0.0.2",
+    "machinepack-github": "^3.0.4"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+"preferGlobal": true,
+"bin": {
+  "meta4": "node ."
+}
 }
