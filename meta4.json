@@ -14,7 +14,7 @@
 	},
 	"machine": {
 		"path": "/machine",
-		"home": "src/apis/machines",
+		"home": "src/api/machines",
 		"repository": "http://nodemachine.org",
 		"config": {
 			"github": {
