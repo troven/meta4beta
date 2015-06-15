@@ -1,2 +1,2 @@
-node src/start.js
+node src/start.js $*
 

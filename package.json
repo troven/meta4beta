@@ -17,7 +17,12 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   ],
+"repository": {
+    "type": "git",
+    "url": "https://github.com/troven/meta4beta.git"
+  },
   "dependencies": {
+    "machinepack-github": "^3.0.4",
     "meta4node": "~0.7.14",
     "meta4ux": "~0.6.4",
     "mongodb": "~2.0.33"

@@ -1,15 +1,16 @@
-<<<<<<< HEAD
 # meta4
 
 wiki
+keys
+etc
 notes
 tmp
+todo
 
 # IntelliJ
 *.iml
 
 =======
->>>>>>> e6a841ec0bd6076319e5aebfc175535a9aadda28
 # Logs
 logs
 *.log
