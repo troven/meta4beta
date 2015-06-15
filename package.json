@@ -1,6 +1,6 @@
 {
   "name": "meta4beta",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "meta4beta - executable wireframes",
   "main": "src/index.js",
   "scripts": {
@@ -28,8 +28,8 @@
     "machinepack-github": "^3.0.4"
   },
   "devDependencies": {},
-"preferGlobal": true,
-"bin": {
-  "meta4": "bin/meta4.sh"
-}
+  "preferGlobal": true,
+  "bin": {
+    "meta4": "bin/meta4.sh"
+  }
 }
