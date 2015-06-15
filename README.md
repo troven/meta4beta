@@ -35,7 +35,7 @@ http://localhost:8080/meta4beta/
 If you're using on Windows, or you want to roll your own. 
 
 <pre>
-node .
+C:\meta4> node .
 </pre>
 
 7) Browse the demo at:
