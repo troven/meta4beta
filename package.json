@@ -22,7 +22,7 @@
     "url": "https://github.com/troven/meta4beta.git"
   },
   "dependencies": {
-    "meta4node": "~0.7.15",
+    "meta4node": "~0.7.17",
     "meta4ux": "~0.6.6",
     "meta4facts": "~0.0.2",
     "machinepack-github": "^3.0.4"
