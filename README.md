@@ -11,13 +11,13 @@ For a basic tutorial on building your UI, check out: https://github.com/troven/m
 <pre>
 $ git clone https://github.com/troven/meta4beta.git
 $ cd meta4beta
-$ npm install
+$ npm install -g
 </pre>
 
 2) Start your meta4 server, type:
 
 <pre>
-$ ./bin/meta.sh
+$ meta4
 </pre>
 
 Your server should start-up and announce that it's listening on port 8080.
