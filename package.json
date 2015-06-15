@@ -1,6 +1,6 @@
 {
   "name": "meta4beta",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "meta4beta - executable wireframes",
   "main": "src/index.js",
   "scripts": {
@@ -30,6 +30,6 @@
   "devDependencies": {},
 "preferGlobal": true,
 "bin": {
-  "meta4": "node ."
+  "meta4": "bin/meta4.sh"
 }
 }
