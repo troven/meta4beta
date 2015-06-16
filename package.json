@@ -1,6 +1,6 @@
 {
   "name": "meta4beta",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "meta4beta - executable wireframes",
   "main": "src/index.js",
   "scripts": {
@@ -24,8 +24,8 @@
   "dependencies": {
     "machinepack-github": "^3.0.4",
     "meta4facts": "~0.0.4",
-    "meta4node": "~0.7.28",
-    "meta4ux": "~0.6.9"
+    "meta4node": "~0.7.29",
+    "meta4ux": "~0.6.10"
   },
   "devDependencies": {},
   "preferGlobal": true,
