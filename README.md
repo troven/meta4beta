@@ -52,16 +52,17 @@ Take a look at the following files to get the basic idea:
 
 <pre>
 Models:
-./src/models/meta/
+./src/models/meta/meta4users.json
 
 Scripts:
 ./src/scripts/hello.js
 ./src/scripts/world.js
 
 Templates:
-./src/templates/client
+./src/templates/client/crud_items.html
 
 Views:
+./src/views/crud.json
 ./src/views/footer.json
 ./src/views/header.json
 ./src/views/hello.json
