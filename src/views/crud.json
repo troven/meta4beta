@@ -1,0 +1,29 @@
+{
+	"id": "views:my_crud",
+	"widget": "CRUD",
+	"collection": "meta4users",
+	"views": {
+		"create": "edit",
+		"read": {
+			"css": "col-sm-6",
+			"widget": "ActionList",
+			"child": {
+				"template": "templates:crud_items.html"
+			}
+		},
+		"update": "edit",
+		"edit": {
+			"widget": "Form",
+			"schema": {
+				"username": { 
+					"label": "Username",
+					"required": true
+				},
+				"email": { 
+					"label": "Email Address",
+					"required": true
+				}
+			}
+		}
+	}
+}

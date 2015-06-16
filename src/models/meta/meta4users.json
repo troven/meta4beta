@@ -1,0 +1,32 @@
+{
+      "id": "meta4users",
+      "label": "Project Model",
+      "type": "Default",
+      "idAttribute": "_id",
+
+
+      "isClient": true,
+      "prefetch": true,
+	"debug": true,
+
+      "isServer": true,
+      "adapter": {
+          "type": "loki"
+      },
+
+      "schema": {
+        "username": {
+          "label": "User Name",
+          "type": "string",
+          "required": true
+        },
+        "email": {
+          "label": "Email",
+          "type": "string",
+          "required": true
+        }
+      },
+
+    "defaults": {
+      }
+}

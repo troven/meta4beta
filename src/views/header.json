@@ -4,6 +4,7 @@
   "widget": "MenuButton",
   "collection": [
 	{"id": "hello", "label": "Hello" },
-	{"id": "world", "label": "World" }
+	{"id": "world", "label": "World" },
+	{"id": "views:my_crud", "label": "CRUD users" }
  ]
 }
