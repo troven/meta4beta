@@ -1,7 +1,7 @@
 {
   "id": "views:header",
   "label": "Hello !!",
-  "widget": "MenuButton",
+  "widget": "MenuList",
   "collection": [
 	{"id": "hello", "label": "Hello" },
 	{"id": "world", "label": "World" },
