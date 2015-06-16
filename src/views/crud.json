@@ -17,7 +17,8 @@
 			"schema": {
 				"username": { 
 					"label": "Username",
-					"required": true
+					"required": true,
+					"validators": ["sanitize"]
 				},
 				"email": { 
 					"label": "Email Address",
