@@ -1,16 +1,18 @@
 {
   "id": "todos",
   "label": "ToDo Item Model",
-  "isRemote": true,
+  "isServer": true,
   "isClient": true,
   "type": "Default",
-  "store": "nedb",
+  "store": "loki",
   "prefetch": true,
   "debug": true,
-  "defaults": {
+
+	"defaults": {
     "label": "New Task"
   },
-  "schema": {
+
+	"schema": {
     "label": {
       "validators": ["required"]
     },

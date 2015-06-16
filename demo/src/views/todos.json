@@ -16,6 +16,7 @@
         "body": {
           "debug": false,
           "widget": "SearchFilter",
+	  "collection": "todos",
           "facets": [ "dueDate", "complete" ]
         }
       }

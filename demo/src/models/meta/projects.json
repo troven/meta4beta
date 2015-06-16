@@ -1,10 +1,10 @@
 {
    "id": "projects",
    "label": "Projects Model",
-   "isRemote": true,
+   "isServer": true,
    "isClient": true,
    "type": "Default",
-   "store": "file",
+   "store": "loki",
    "prefetch": true,
    "debug": false,
    "defaults": {

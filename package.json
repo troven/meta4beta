@@ -24,8 +24,8 @@
   "dependencies": {
     "machinepack-github": "^3.0.4",
     "meta4facts": "~0.0.4",
-    "meta4node": "~0.7.32",
-    "meta4ux": "~0.6.14"
+    "meta4node": "~0.7.33",
+    "meta4ux": "~0.6.15"
   },
   "devDependencies": {},
   "preferGlobal": true,
