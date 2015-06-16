@@ -1,5 +1,6 @@
 {
   "name": "meta4beta",
+  "version": "0.0.1",
   "home": "src",
   "basePath": "/meta4beta",
   "host": "localhost",
