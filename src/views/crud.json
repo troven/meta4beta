@@ -14,6 +14,7 @@
 		"update": "edit",
 		"edit": {
 			"widget": "Form",
+			"css": "container",
 			"schema": {
 				"username": { 
 					"label": "Username",
@@ -24,6 +25,11 @@
 					"label": "Email Address",
 					"required": true,
 					"validators": ["email"]
+				},
+				"photo": { 
+					"label": "Photo",
+					"collection": "uploads",
+					"editor": "Upload"
 				}
 			}
 		}

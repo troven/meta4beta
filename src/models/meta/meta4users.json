@@ -13,6 +13,9 @@
       "adapter": {
           "type": "loki"
       },
+      "upload": {
+	"collection": "uploads"
+      },
 
       "schema": {
         "username": {
