@@ -26,6 +26,7 @@
 	},
 	"upload": {
 	 "home": "tmp/uploads",
+	 "baseURL": "/meta4beta/upload/",
 	  "limits": {
 		"fieldNameSize": 100,
 		"files": 2,
