@@ -1,6 +1,6 @@
 {
       "id": "meta4users",
-      "label": "Project Model",
+      "label": "Users Model",
       "type": "Default",
       "idAttribute": "_id",
 
@@ -14,7 +14,7 @@
           "type": "loki"
       },
       "upload": {
-	"collection": "uploads"
+		  "collection": "uploads"
       },
 
       "schema": {

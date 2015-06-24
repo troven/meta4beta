@@ -1,0 +1,16 @@
+{
+  "id": "views:menu",
+  "label": "Main Menu",
+  "widget": "MenuList",
+  "css": "panel panel-default",
+
+	"when": {
+	  },
+
+	"collection": [
+		{ "id": "views:my_crud", "label": "CRUD"},
+		{ "id": "views:menu", "label": "Menu"},
+		{ "id": "views:world", "label": "World"},
+		{ "id": "views:my_tree", "label": "Tree"}
+  	]
+}

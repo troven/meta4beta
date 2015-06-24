@@ -1,10 +1,8 @@
 {
   "id": "views:header",
   "label": "Hello !!",
-  "widget": "MenuList",
-  "collection": [
-	{"id": "hello", "label": "Hello" },
-	{"id": "world", "label": "World" },
-	{"id": "views:my_crud", "label": "CRUD users" }
- ]
+  "widget": "Regions",
+	"views": {
+		"body": "views:menu"
+	}
 }

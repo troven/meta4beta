@@ -1,6 +1,6 @@
 {
-  "id": "views:hello",
-  "label": "Hello !!",
+  "id": "views:footer",
+  "label": "Hello Footer",
   "widget": "Template",
   "template": "<h1>Hello World</h1>"
 }

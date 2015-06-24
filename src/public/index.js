@@ -8,6 +8,7 @@ require.config({
     baseUrl: "js/",
     waitSeconds: 10,
     paths: {
+        socket_io: "vendor/socket.io/socket.io",
         jquery: "vendor/jquery/jquery-1.11.2.min",
         underscore: "vendor/underscore/underscore",
         jquery_ui: "vendor/jquery/jquery-ui-1.11.4.custom/jquery-ui.min",

@@ -1,0 +1,40 @@
+{
+      "id": "meta4groups",
+      "label": "User Groups Model",
+      "type": "Default",
+      "idAttribute": "_id",
+
+
+      "isClient": true,
+      "prefetch": true,
+	"debug": true,
+
+      "isServer": true,
+      "adapter": {
+          "type": "loki"
+      },
+      "schema": {
+        "label": {
+          "label": "Group Name",
+          "type": "string",
+          "required": true
+        },
+        "comment": {
+          "label": "Description",
+          "type": "string",
+          "required": true
+        }
+      },
+
+    "defaults": {
+      },
+	"data": [
+		{ "_id": "1", "label": "#1", "comment": "Branch 1.0" },
+		{ "_id": "2", "label": "#2", "comment": "Branch 2.0",
+			"groups": [
+				{ "_id": "1.1", "label": "#1.1", "comment": "Branch 1.1" },
+				{ "_id": "1.2", "label": "#1.2", "comment": "Branch 1.2" }
+			]
+		}
+	]
+}
