@@ -32,8 +32,8 @@
 		{ "_id": "1", "label": "#1", "comment": "Branch 1.0" },
 		{ "_id": "2", "label": "#2", "comment": "Branch 2.0",
 			"groups": [
-				{ "_id": "1.1", "label": "#1.1", "comment": "Branch 1.1" },
-				{ "_id": "1.2", "label": "#1.2", "comment": "Branch 1.2" }
+				{ "_id": "2.1", "label": "#2.1", "comment": "Branch 2.1" },
+				{ "_id": "2.2", "label": "#2.2", "comment": "Branch 2.2" }
 			]
 		}
 	]
