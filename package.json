@@ -1,6 +1,6 @@
 {
   "name": "meta4beta",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "meta4beta - executable wireframes",
   "main": "src/index.js",
   "scripts": {
