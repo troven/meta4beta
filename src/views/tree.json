@@ -1,6 +1,7 @@
 {
 	"id": "views:my_tree",
 	"widget": "Tree",
+	"isSortable": true,
 	"collection": "meta4groups",
 	"child": {
 		"template": "templates:tree_branch.html",
