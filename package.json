@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "meta4facts": "~0.0.4",
+    "meta4helpers": "^0.1.14",
     "meta4node": "~0.7.42",
     "meta4ux": "~0.6.30"
   },
