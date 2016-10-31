@@ -45,9 +45,11 @@ require.config({
         core: "meta4beta/core",
         fact: "meta4beta/fact",
         ux: "meta4beta/ux",
+        ux_core: "meta4beta/ux.core",
         ux_mixin: "meta4beta/ux.mixin",
         ux_dialog: "meta4beta/ux.dialog",
-        iq: "meta4beta/iq",
+
+		iq: "meta4beta/iq",
         asq: "meta4beta/asq",
         meta4app: "meta4beta/meta4app",
         splash: "meta4beta/splash",

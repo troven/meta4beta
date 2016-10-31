@@ -1,8 +1,6 @@
-
 # It is advisable to remove this comment
 # you don't usually want to share your local settings
 # meta4.json
-
 
 wiki
 keys
@@ -10,6 +8,9 @@ etc
 notes
 tmp
 todo
+build
+target
+dist
 
 # IntelliJ
 *.iml

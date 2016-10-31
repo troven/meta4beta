@@ -1,0 +1,14 @@
+{
+	"blueprint": {
+		"from": "./blueprints/",
+		"to": "./tmp/build"
+	},
+	"featuresPath": "./features",
+	"files": "./features/files",
+	"target": {},
+	"targets": {},
+	"agent": {},
+	"agents": {},
+	"certificates": {},
+	"reporter": "spec"
+}

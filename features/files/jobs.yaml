@@ -1,0 +1,224 @@
+swagger: "2.0"
+
+info:
+  version: 0.0.1
+  title: API for Dials CRM Job Records
+  description: A simple API to create, read, update and delete jobs
+
+host: dials-crm.apigeek.me
+basePath: /crm
+schemes:
+  - https
+x-meta4-id: jobs
+
+paths:
+  /job:
+    get:
+      operationId: job_list
+      summary: Gets a list of job records
+      description: Returns a list containing all jobs.
+      security:
+        - OauthSecurity:
+            - reader
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+       - name: query
+         in: query
+         description: job query for search
+         type: string
+      responses:
+        200:
+          description: A list of jobs
+          schema:
+            $ref: "#/definitions/Jobs"
+        500:
+          $ref: "#/responses/500"
+    post:
+      operationId: job_create
+      summary: Creates a job record
+      description: Adds a new job to the jobs list.
+      security:
+        - OauthSecurity:
+            - creater
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: job
+          in: body
+          description: The job to create.
+          required: true
+          schema:
+            $ref: "#/definitions/Job"
+      responses:
+        204:
+          description: Jobs succesfully created.
+        400:
+          description: Jobs couldn't have been created.
+        500:
+          $ref: "#/responses/500"
+  /job/{id}:
+    get:
+      operationId: job_read
+      summary: Gets a job
+      description: Returns a single job for its id.
+      security:
+        - OauthSecurity:
+            - reader
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The job's unique id
+          type: string
+      responses:
+        200:
+          description: A Job
+          schema:
+            $ref: "#/definitions/Job"
+        404:
+          description: The Job does not exists.
+        500:
+          $ref: "#/responses/500"
+    put:
+      operationId: job_update
+      summary: Update a job
+      description: Change a job record
+      security:
+        - OauthSecurity:
+            - updater
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The job's unique id
+          type: string
+        - name: job
+          in: body
+          required: true
+          description: The job to update.
+          schema:
+            $ref: "#/definitions/Job"
+      responses:
+        204:
+          description: Jobs succesfully updated.
+        400:
+          description: Jobs couldn't have been updated.
+        500:
+          $ref: "#/responses/500"
+    delete:
+      operationId: job_delete
+      summary: Delete a job record
+      description: Remove a job from the jobs list.
+      security:
+        - OauthSecurity:
+            - deleter
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The job's unique id
+          type: string
+        - name: job
+          in: body
+          description: The job to delete.
+          schema:
+            $ref: "#/definitions/Job"
+      responses:
+        204:
+          description: Job succesfully deleted.
+        400:
+          description: Job couldn't be deleted.
+        500:
+          $ref: "#/responses/500"
+definitions:
+  Job:
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      meta:
+          $ref: "#/definitions/Metadata"
+      can:
+          $ref: "#/definitions/Permission"
+
+  Metadata:
+    properties:
+      created:
+        type: string
+        format: date
+      modified:
+        type: string
+      owner:
+        type: string
+      status:
+        type: string
+        default: ACTIVE
+        enum:
+          - ACTIVE
+          - INACTIVE
+          - ARCHIVED
+
+  Permission:
+    properties:
+      create:
+        type: boolean
+      read:
+        type: boolean
+      update:
+        type: boolean
+      delete:
+        type: boolean
+      share:
+        type: boolean
+
+  Jobs:
+    uniqueItems: true
+    type: array
+    items:
+      $ref: "#/definitions/Job"
+
+  Error:
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+
+responses:
+  500:
+    description: An unexpected error occured.
+    schema:
+      $ref: "#/definitions/Error"
+
+securityDefinitions:
+  OauthSecurity:
+    type: oauth2
+    flow: accessCode
+    authorizationUrl: 'https://login.apigeek.me/oauth'
+    tokenUrl: 'https://login.apigeek.me/oauth/token'
+    scopes:
+      reader: Read scope
+      creater: Create scope
+      updater: Update scope
+      deleter: Delete scope

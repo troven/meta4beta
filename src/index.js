@@ -1,3 +1,16 @@
+#!/usr/bin/env node
+
+/**
+ * Troven: Meta4
+ *
+ * Command Line launcher
+ *
+ * (c) Lee Curtis 2016 (c) Troven 2009-2016. 
+ * 
+ * Apache Licensed.
+ *
+ */
+
 var self = module.exports;
 
 // =============================================================================

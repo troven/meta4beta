@@ -1,0 +1,247 @@
+swagger: "2.0"
+
+info:
+  version: 0.0.1
+  title: API for Dials CRM Client Records
+  description: A simple API to create, read, update and delete clients
+
+host: dials-crm.apigeek.me
+basePath: /crm
+schemes:
+  - https
+
+x-meta4-id: clients
+
+paths:
+  /client:
+    get:
+      operationId: client_list
+      summary: Gets a list of client records
+      description: Returns a list containing all clients.
+      security:
+        - OauthSecurity:
+            - reader
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+       - name: query
+         in: query
+         description: client query for search
+         type: string
+      responses:
+        200:
+          description: A list of clients
+          schema:
+            $ref: "#/definitions/Clients"
+        500:
+          $ref: "#/responses/500"
+    post:
+      operationId: client_create
+      summary: Creates a client record
+      description: Adds a new client to the clients list.
+      security:
+        - OauthSecurity:
+            - creater
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: client
+          in: body
+          description: The client to create.
+          required: true
+          schema:
+            $ref: "#/definitions/Client"
+      responses:
+        204:
+          description: Clients succesfully created.
+        400:
+          description: Clients couldn't have been created.
+        500:
+          $ref: "#/responses/500"
+    put:
+      operationId: client_update
+      summary: Update a client
+      description: Change a client record
+      security:
+        - OauthSecurity:
+            - updater
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The client's unique id
+          type: string
+        - name: client
+          in: body
+          required: true
+          description: The client to update.
+          schema:
+            $ref: "#/definitions/Client"
+      responses:
+        204:
+          description: Clients succesfully updated.
+        400:
+          description: Clients couldn't have been updated.
+        500:
+          $ref: "#/responses/500"
+    delete:
+      operationId: client_delete
+      summary: Delete a client record
+      description: Remove a client from the clients list.
+      security:
+        - OauthSecurity:
+            - deleter
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The client's unique id
+          type: string
+        - name: client
+          in: body
+          description: The client to delete.
+          schema:
+            $ref: "#/definitions/Client"
+      responses:
+        204:
+          description: Client succesfully deleted.
+        400:
+          description: Client couldn't be deleted.
+        500:
+          $ref: "#/responses/500"
+definitions:
+  Client:
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      legal_name:
+        type: string
+      sic_code:
+        type: string
+      business_number:
+        type: string
+      tax_number:
+        type: string
+      address:
+        type: array
+        items:
+          $ref: "#/definitions/ContactAddress"
+      meta:
+          $ref: "#/definitions/Metadata"
+      can:
+          $ref: "#/definitions/Permission"
+
+  Metadata:
+    properties:
+      created:
+        type: string
+        format: date
+      modified:
+        type: string
+      owner:
+        type: string
+      status:
+        type: string
+        default: ACTIVE
+        enum:
+          - ACTIVE
+          - INACTIVE
+          - ARCHIVED
+
+  Permission:
+    properties:
+      create:
+        type: boolean
+      read:
+        type: boolean
+      update:
+        type: boolean
+      delete:
+        type: boolean
+      share:
+        type: boolean
+
+  ContactAddress:
+    required:
+      - street
+      - country
+    properties:
+      purpose:
+        type: string
+        default: PRIMARY
+        enum:
+          - PRIMARY
+          - PO BOX
+          - OFFICE
+          - BRANCH
+          - RETAIL
+          - WAREHOUSE
+          - HEAD OFFICE
+      street:
+        type: string
+      city:
+        type: string
+      state:
+        type: string
+      country:
+        type: string
+      phone:
+        type: string
+      fax:
+        type: string
+      email:
+        type: string
+      website:
+        type: string
+      meta:
+          $ref: "#/definitions/Metadata"
+      can:
+          $ref: "#/definitions/Permission"
+
+  Clients:
+    uniqueItems: true
+    type: array
+    items:
+      $ref: "#/definitions/Client"
+
+  Error:
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+
+responses:
+  500:
+    description: An unexpected error occured.
+    schema:
+      $ref: "#/definitions/Error"
+
+securityDefinitions:
+  OauthSecurity:
+    type: oauth2
+    flow: accessCode
+    authorizationUrl: 'https://login.apigeek.me/oauth'
+    tokenUrl: 'https://login.apigeek.me/oauth/token'
+    scopes:
+      reader: Read scope
+      creater: Create scope
+      updater: Update scope
+      deleter: Delete scope

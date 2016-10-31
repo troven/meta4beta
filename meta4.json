@@ -2,12 +2,14 @@
   "name": "meta4beta",
   "version": "0.0.1",
   "home": "src",
-  "basePath": "/meta4beta",
+  "basePath": "/",
   "host": "localhost",
   "port": 8090,
   "salt": "-change-me-to-anything-",
 
   "features": {
+	"meta4ux": {
+	},
 	"assets": {
 	  "disabled": false,
 	  "path": "/",
