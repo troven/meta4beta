@@ -1,6 +1,6 @@
 {
   "name": "meta4beta",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "meta4beta - executable wireframes",
   "main": "src/index.js",
   "scripts": {
@@ -22,10 +22,9 @@
     "url": "https://github.com/troven/meta4beta.git"
   },
   "dependencies": {
-    "meta4facts": "~0.0.4",
-    "meta4helpers": "^0.1.14",
-    "meta4node": "~0.7.42",
-    "meta4ux": "~0.6.30"
+    "meta4helpers": "^0.2.0",
+    "meta4node": "~0.8.0",
+    "meta4ux": "~0.7.0"
   },
   "devDependencies": {},
   "preferGlobal": true,

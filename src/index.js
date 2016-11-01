@@ -19,7 +19,7 @@ var self = module.exports;
 
 self.meta4  = require('meta4node');        // meta4 API manager
 
-self.meta4.cli();
+self.meta4.cli(self.meta4.server);
 
 // we're done ....
 
